@@ -32,7 +32,7 @@ def main():
     random_gess(my_number)
     make_shirt()
     make_shirt("medium")
-    make_shirt("small", "Cat's cute!")
+    make_shirt(size="small", text="Cat's cute!")
     magician_names = ['Harry Houdini', 'David Blaine', 'Criss Angel']
     show_magicians(magician_names)
     magician_names = make_great(magician_names)

@@ -1,0 +1,25 @@
+import random
+
+
+def throw_dice():
+    dice = random.randint(1, 6)
+    return dice
+
+def throw_until_doubles():
+    count = 0
+    while True:
+        dice1 = throw_dice()
+        dice2 = throw_dice()
+        if dice1==dice2:
+            return count
+        else:
+            count+=1
+
+def main():
+    my_list = []
+    for i in range(100):
+        my_list.append(throw_until_doubles())
+    print(f"Total throws: {sum(my_list)}")
+    print(f"Average throws to reach doubles: {round(sum(my_list)/100, 2)}")
+if __name__ == "__main__":
+    main()
